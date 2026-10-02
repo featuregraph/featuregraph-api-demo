@@ -5,13 +5,36 @@ dataset and returns the resulting objects, over a plain HTTP API. No local
 installation of FeatureGraph required.
 
 This repo is a starting point for calling that API: a usage reference and a
-runnable notebook. The API itself is a separate, hosted service. Nothing
+runnable notebook. The API itself is a separate, hosted service — nothing
 in this repo needs to be installed or deployed.
 
 ## Get a key
 
-Contact
+This is an early, hand-built service, not self-service yet. Contact
 [Nazia Habib](mailto:nazia.habib@featuregraph.ai) for an API key.
+
+## Prerequisites
+
+- **Python 3.9 or later.** On Mac, this is almost always available as
+  `python3` rather than `python` — if `pip install` or `python` below
+  don't work, try `pip3`/`python3` instead.
+- **A way to open a Jupyter notebook (`.ipynb`).** If you don't already
+  have one:
+  ```bash
+  pip install notebook
+  jupyter notebook
+  ```
+  If `jupyter` isn't found right after installing, it was likely installed
+  somewhere not on your shell's `PATH` (common on Mac). Either add it:
+  ```bash
+  echo 'export PATH="$HOME/Library/Python/3.9/bin:$PATH"' >> ~/.zshrc
+  source ~/.zshrc
+  ```
+  or call it directly:
+  ```bash
+  ~/Library/Python/3.9/bin/jupyter notebook
+  ```
+  (adjust the `3.9` to match your own Python version if different)
 
 ## Quickstart
 
@@ -32,7 +55,7 @@ Contact
 
 ## What's here
 
-- **`USAGE.md`** — full usage reference: endpoints,
+- **`featuregraph-api-usage.md`** — full usage reference: endpoints,
   required headers, the response format, and what every field in the
   result means.
 - **`featuregraph_api_starter.ipynb`** — a runnable notebook that calls the
