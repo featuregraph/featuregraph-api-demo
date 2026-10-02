@@ -32,7 +32,7 @@ Contact
 
 ## What's here
 
-- **`featuregraph-api-usage.md`** — full usage reference: endpoints,
+- **`USAGE.md`** — full usage reference: endpoints,
   required headers, the response format, and what every field in the
   result means.
 - **`featuregraph_api_starter.ipynb`** — a runnable notebook that calls the
