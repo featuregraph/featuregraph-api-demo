@@ -17,10 +17,17 @@ This is an early, hand-built service, not self-service yet. Contact
 
 1. Clone this repo.
 2. `pip install -r requirements.txt`
-3. Copy `.env.example` to `.env` and fill in the key you were given:
+3. Create your own `.env` file with your key in it:
+   ```bash
+   cp .env.example .env
+   ```
+   Then open `.env` and fill in the key you were given:
    ```
    FEATUREGRAPH_API_KEY=your-key-here
    ```
+   `.env` is already listed in `.gitignore`, so it's excluded from version
+   control automatically — your key never ends up committed or pushed,
+   even if you later make changes and push them back to your own fork.
 4. Open `featuregraph_api_starter.ipynb` and run it top to bottom.
 
 ## What's here
