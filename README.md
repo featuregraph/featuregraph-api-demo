@@ -1,12 +1,10 @@
 # FeatureGraph API Demo
 
 A hosted endpoint that runs FeatureGraph's deterministic compiler on a known
-dataset and returns the resulting objects, over a plain HTTP API. No local
-installation of FeatureGraph required.
+dataset and returns the resulting objects, over a plain HTTP API. 
 
 This repo is a starting point for calling that API: a usage reference and a
-runnable notebook. The API itself is a separate, hosted service. Nothing
-in this repo needs to be installed or deployed.
+runnable notebook. The API itself is a separate, hosted service. 
 
 ## Get a key
 
