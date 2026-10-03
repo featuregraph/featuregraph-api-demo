@@ -1,3 +1,5 @@
 requests>=2.31
 pandas>=1.5
 python-dotenv>=1.0
+featuregraph-smoothing-core>=1.1.0
+synthefy>=7.0.0
