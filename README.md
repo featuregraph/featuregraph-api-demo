@@ -10,44 +10,27 @@ in this repo needs to be installed or deployed.
 
 ## Get a key
 
-This is an early, hand-built service, not self-service yet. Contact
-[Nazia Habib](mailto:nazia.habib@featuregraph.ai) for an API key.
+Contact [Nazia Habib](mailto:nazia.habib@featuregraph.ai) for an API key.
 
-## Prerequisites
-
-- **Python 3.9 or later.** On Mac, this is almost always available as
-  `python3` rather than `python` — if `pip install` or `python` below
-  don't work, try `pip3`/`python3` instead.
-- **A way to open a Jupyter notebook (`.ipynb`).** If you don't already
-  have one:
-  ```bash
-  pip install notebook
-  jupyter notebook
-  ```
-  If `jupyter` isn't found right after installing, it was likely installed
-  somewhere not on your shell's `PATH` (common on Mac). Either add it:
-  ```bash
-  echo 'export PATH="$HOME/Library/Python/3.9/bin:$PATH"' >> ~/.zshrc
-  source ~/.zshrc
-  ```
-  or call it directly:
-  ```bash
-  ~/Library/Python/3.9/bin/jupyter notebook
-  ```
-  (adjust the `3.9` to match your own Python version if different)
+`nori_comparison_demo.ipynb` (see below) also calls Synthefy's hosted Nori
+model, which needs its own, separate API key. Get one from Synthefy
+directly; it's unrelated to the FeatureGraph key above.
 
 ## Quickstart
 
 1. Clone this repo.
 2. `pip install -r requirements.txt`
-3. Create your own `.env` file with your key in it:
+3. Create your own `.env` file with your keys in it:
    ```bash
    cp .env.example .env
    ```
-   Then open `.env` and fill in the key you were given:
+   Then open `.env` and fill in both keys:
    ```
-   FEATUREGRAPH_API_KEY=your-key-here
+   FEATUREGRAPH_API_KEY=your-featuregraph-key-here
+   SYNTHEFY_API_KEY=your-synthefy-key-here
    ```
+   (`SYNTHEFY_API_KEY` is only needed for `nori_comparison_demo.ipynb`; the
+   starter notebook alone only needs `FEATUREGRAPH_API_KEY`.)
    `.env` is already listed in `.gitignore`, so it's excluded from version
    control automatically — your key never ends up committed or pushed,
    even if you later make changes and push them back to your own fork.
@@ -61,6 +44,12 @@ This is an early, hand-built service, not self-service yet. Contact
 - **`featuregraph_api_starter.ipynb`** — a runnable notebook that calls the
   API, loads the result into a pandas DataFrame, and shows how the
   `smooth_window` parameter changes what gets detected.
+- **`nori_comparison_demo.ipynb`** — a small, self-contained comparison
+  showing FeatureGraph's objects plugging directly into Synthefy's Nori
+  model, alongside a raw-signal baseline and a training-mean control.
+  States plainly what it does and doesn't show, and links to our full,
+  properly controlled interoperability study for the rigorous version of
+  the same question.
 
 ## What this API does
 
