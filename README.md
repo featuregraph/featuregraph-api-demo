@@ -56,14 +56,11 @@ known signal and returns every detected object (for respiration: a breath)
 with its timing, amplitude, and shape. See `featuregraph-api-usage.md` for
 the full field reference.
 
-## What this API doesn't do yet
-
 - It doesn't choose the smoothing window for you. That choice measurably
   changes the result (see the usage doc for a concrete number from our own
   published research) -- validated, automatic window selection is a
   separate process we run directly on your data, not exposed here.
-- It serves a fixed, known dataset today. Support for bringing your own
-  data is in progress.
+- This public endpoint serves a fixed, known dataset. Your build will allow you to bring and serve your own data.
 
 ## Questions
 
